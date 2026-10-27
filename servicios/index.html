@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TramitaNet — Pagos y consulta de servicios</title>
+<meta name="description" content="Paga y consulta tus servicios más comunes: luz (CFE), agua (SACMEX), teléfono e internet (Telmex, Telcel), gas, predial y tenencia. Solo ligas oficiales.">
+<style>
+:root{--navy:#123047;--bg:#f4f6f8;--card:#fff;--text:#1f2937;--muted:#6b7280;--line:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+header{background:var(--navy);color:#fff;padding:2rem 1rem 1.5rem}header .wrap,main,footer .wrap{max-width:1080px;margin:0 auto}
+h1{margin:0;font-size:2rem}h1 span{color:#5eead4}.tag{color:#cbd5e1;margin:.5rem 0 1.2rem}
+nav a{color:#fff;text-decoration:none;margin-right:1.2rem;font-weight:600}nav a.active{border-bottom:3px solid #5eead4;padding-bottom:.2rem}
+.search{margin:1.5rem 0 1rem}input[type=search]{width:100%;padding:.9rem 1rem;font-size:1rem;border:2px solid var(--line);border-radius:.75rem;background:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem;margin-bottom:2rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.1rem 1.2rem;text-decoration:none;color:inherit;display:block}.card:hover{border-color:var(--navy);box-shadow:0 4px 18px rgba(0,0,0,.08)}
+.card h3{margin:0 0 .4rem;font-size:1.05rem}.card p{margin:0;color:var(--muted);font-size:.95rem;line-height:1.45}
+.badge{display:inline-block;font-size:.75rem;font-weight:700;padding:.2rem .55rem;border-radius:999px;margin-bottom:.6rem}
+.b-pago{background:#ede9fe;color:#5b21b6}.b-consulta{background:#dbeafe;color:#1e40af}.b-mixto{background:#ffedd5;color:#9a3412}
+h2{font-size:1.35rem;margin:1.5rem 0 1rem}
+footer{background:#fff;border-top:1px solid var(--line);padding:1.5rem 1rem;color:var(--muted);font-size:.9rem;line-height:1.6}
+.nores{padding:2rem;text-align:center;color:var(--muted);display:none}
+@media(max-width:600px){h1{font-size:1.6rem}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Tramita<span>Net</span> / Servicios</h1>
+    <p class="tag">Paga y consulta tus servicios más comunes desde sus portales oficiales. Sin intermediarios.</p>
+    <nav><a href="../">Trámites</a><a class="active" href="./">Pagos y servicios</a></nav>
+  </div>
+</header>
+<main>
+  <div class="search"><input type="search" id="q" placeholder="Busca un servicio: luz, agua, teléfono, predial…"></div>
+
+  <h2>Luz, agua, teléfono y gas</h2>
+  <div class="grid">
+    <a class="card" href="https://www.cfe.mx" target="_blank" rel="noopener"><span class="badge b-mixto">Pago y consulta</span><h3>Luz — CFE, paga tu recibo</h3><p>Paga tu recibo de luz en línea, consulta tu saldo y descarga tu recibo (también en la app CFE Contigo).</p></a>
+    <a class="card" href="https://www.sacmex.cdmx.gob.mx" target="_blank" rel="noopener"><span class="badge b-consulta">Consulta</span><h3>Agua — SACMEX / SEGIAGUA (CDMX)</h3><p>Portal oficial del sistema de aguas de la Ciudad de México: servicios, trámites y atención.</p></a>
+    <a class="card" href="https://aplicaciones.sacmex.cdmx.gob.mx" target="_blank" rel="noopener"><span class="badge b-pago">Pago</span><h3>Agua — SACMEX, pago en línea (CDMX)</h3><p>Pago del servicio de agua de la Ciudad de México.</p></a>
+    <a class="card" href="https://www.telmex.com" target="_blank" rel="noopener"><span class="badge b-mixto">Pago y consulta</span><h3>Teléfono / internet — Telmex (Mi Telmex)</h3><p>Consulta, paga y domicilia tu recibo Telmex / Infinitum y descarga tu recibo digital desde tu área de cliente.</p></a>
+    <a class="card" href="https://www.telcel.com" target="_blank" rel="noopener"><span class="badge b-mixto">Pago y consulta</span><h3>Teléfono — Telcel (Mi Telcel)</h3><p>Recarga, paga tu línea, compra paquetes y gestiona tus servicios Telcel desde tu área de cliente.</p></a>
+    <a class="card" href="https://www.naturgy.com.mx" target="_blank" rel="noopener"><span class="badge b-mixto">Pago y consulta</span><h3>Gas natural — Naturgy México</h3><p>Sitio oficial de Naturgy México para gestionar tu servicio de gas natural desde el área de clientes. El gas varía por zona de distribución.</p></a>
+  </div>
+
+  <h2>Impuestos y derechos (CDMX)</h2>
+  <div class="grid">
+    <a class="card" href="https://www.finanzas.cdmx.gob.mx" target="_blank" rel="noopener"><span class="badge b-pago">Pago</span><h3>Predial (CDMX)</h3><p>Pago de predial vigente, vencido y anticipado vía Tesorería CDMX.</p></a>
+    <a class="card" href="https://www.finanzas.cdmx.gob.mx" target="_blank" rel="noopener"><span class="badge b-pago">Pago</span><h3>Tenencia (CDMX)</h3><p>Pago de tenencia vehicular vía Tesorería CDMX.</p></a>
+    <a class="card" href="https://www.finanzas.cdmx.gob.mx" target="_blank" rel="noopener"><span class="badge b-mixto">Pago y consulta</span><h3>Tesorería CDMX — Pagos y trámites en línea</h3><p>Portal de pagos de la Secretaría de Administración y Finanzas CDMX: predial, tenencia, nómina, infracciones de tránsito y derechos.</p></a>
+  </div>
+
+  <p class="nores" id="nores">Sin resultados para tu búsqueda. Prueba con otra palabra o revisa la sección de <a href="../">Trámites</a>.</p>
+</main>
+<footer><div class="wrap">
+  <p><strong>TramitaNet / Servicios</strong> solo enlaza a portales oficiales. No cobra, no gestiona pagos ni pide tus datos: cada liga te lleva al sitio oficial, donde el pago o la consulta se hace directamente.</p>
+  <p>Los servicios de agua, predial y tenencia se muestran con la Ciudad de México como referencia; en otros estados, el organismo operador o la tesorería estatal tiene su propio portal.</p>
+</div></footer>
+<script>
+const q=document.getElementById('q'),cards=document.querySelectorAll('.card'),nores=document.getElementById('nores');
+q.addEventListener('input',()=>{const t=q.value.toLowerCase().trim();let any=false;
+cards.forEach(c=>{const show=!t||c.textContent.toLowerCase().includes(t);c.style.display=show?'':'none';if(show)any=true;});
+nores.style.display=any?'none':'block';});
+</script>
+</body>
+</html>
