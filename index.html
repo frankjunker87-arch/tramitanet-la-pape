@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TramitaNet — Trámites oficiales de México en un solo lugar</title>
+<meta name="description" content="Directorio de ligas oficiales para trámites digitales y citas en México: registro civil, movilidad, temas legales, transparencia, salud, fiscal, identidad y educación.">
+<style>
+:root{--navy:#123047;--green:#0e7a5f;--amber:#b7791f;--blue:#2563eb;--purple:#7c3aed;--bg:#f4f6f8;--card:#fff;--text:#1f2937;--muted:#6b7280;--line:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+header{background:var(--navy);color:#fff;padding:2rem 1rem 1.5rem}header .wrap,main,footer .wrap{max-width:1080px;margin:0 auto}
+h1{margin:0;font-size:2rem}h1 span{color:#5eead4}.tag{color:#cbd5e1;margin:.5rem 0 1.2rem}
+nav a{color:#fff;text-decoration:none;margin-right:1.2rem;font-weight:600}nav a.active{border-bottom:3px solid #5eead4;padding-bottom:.2rem}
+.search{margin:1.5rem 0 1rem}input[type=search]{width:100%;padding:.9rem 1rem;font-size:1rem;border:2px solid var(--line);border-radius:.75rem;background:#fff}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}.chip{border:1px solid var(--line);background:#fff;padding:.45rem .9rem;border-radius:999px;cursor:pointer;font-size:.9rem}.chip.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+section{margin-bottom:2.2rem}h2{font-size:1.35rem;margin:0 0 .2rem}.sec-note{color:var(--muted);margin:0 0 1rem;font-size:.95rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1.1rem 1.2rem;text-decoration:none;color:inherit;display:block}.card:hover{border-color:var(--navy);box-shadow:0 4px 18px rgba(0,0,0,.08)}
+.card h3{margin:0 0 .4rem;font-size:1.05rem}.card p{margin:0;color:var(--muted);font-size:.95rem;line-height:1.45}
+.badge{display:inline-block;font-size:.75rem;font-weight:700;padding:.2rem .55rem;border-radius:999px;margin-bottom:.6rem}
+.b-enlinea{background:#d1fae5;color:#065f46}.b-cita{background:#fef3c7;color:#92400e}.b-consulta{background:#dbeafe;color:#1e40af}.b-pago{background:#ede9fe;color:#5b21b6}.b-mixto{background:#ffedd5;color:#9a3412}
+footer{background:#fff;border-top:1px solid var(--line);padding:1.5rem 1rem;color:var(--muted);font-size:.9rem;line-height:1.6}
+.nores{padding:2rem;text-align:center;color:var(--muted);display:none}
+@media(max-width:600px){h1{font-size:1.6rem}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Tramita<span>Net</span></h1>
+    <p class="tag">Trámites oficiales de México en un solo lugar: hazlos en línea o agenda tu cita sin gestores ni intermediarios.</p>
+    <nav><a class="active" href="./">Trámites</a><a href="servicios/">Pagos y servicios</a></nav>
+  </div>
+</header>
+<main>
+  <div class="search"><input type="search" id="q" placeholder="Busca un trámite: CURP, pasaporte, licencia, RFC, acta…"></div>
+  <div class="chips" id="chips">
+    <button class="chip active" data-cat="all">Todas</button>
+    <button class="chip" data-cat="general">Acceso general</button>
+    <button class="chip" data-cat="civil">Registro Civil</button>
+    <button class="chip" data-cat="movilidad">Movilidad</button>
+    <button class="chip" data-cat="legal">Temas legales</button>
+    <button class="chip" data-cat="transparencia">Transparencia</button>
+    <button class="chip" data-cat="salud">Salud y seguridad social</button>
+    <button class="chip" data-cat="fiscal">Fiscal y trabajo</button>
+    <button class="chip" data-cat="identidad">Identidad y electoral</button>
+    <button class="chip" data-cat="educacion">Educación</button>
+  </div>
+
+  <section data-cat="general"><h2>Acceso general</h2><p class="sec-note">Empieza aquí si no sabes dónde va tu trámite.</p><div class="grid">
+    <a class="card" href="https://www.gob.mx/tramites" target="_blank" rel="noopener"><span class="badge b-consulta">Consulta</span><h3>Buscador de trámites federales (gob.mx)</h3><p>Buscador oficial de trámites federales y programas sociales: CURP, acta de nacimiento, pasaporte, semanas cotizadas del IMSS y constancia de situación fiscal.</p></a>
+    <a class="card" href="https://llave.cdmx.gob.mx" target="_blank" rel="noopener"><span class="badge b-enlinea">En línea</span><h3>Llave CDMX</h3><p>Inicio de sesión único para trámites de la Ciudad de México, incluida la revisión del registro de licencias.</p></a>
+  </div></section>
+
+  <section data-cat="civil"><h2>Registro Civil</h2><p class="sec-note">Actas y CURP. Los trámites estatales se muestran con CDMX como referencia.</p><div class="grid">
+    <a class="card" href="https://www.gob.mx/curp/" target="_blank" rel="noopener"><span class="badge b-consulta">Consulta</span><h3>CURP (consulta e impresión)</h3><p>Consulta e imprime tu CURP con tus datos personales.</p></a>
+    <a class="card" href="https://www.gob.mx/ActaNacimiento" target="_blank" rel="noopener"><span class="badge b-enlinea">En línea</span><h3>Acta de nacimiento (copia certificada)</h3><p>Obtén tu copia certificada con CURP o datos personales, con pago en línea y descarga en PDF.</p></a>
+    <a class="card" href="https://actas.cdmx.gob.mx" target="_blank" rel="noopener"><span class="badge b-enlinea">En línea</span><h3>Actas de matrimonio y defunción (CDMX)</h3><p>Solicitud de copias digitales de actas registradas en la Ciudad de México.</p></a>
+    <a class="card" href="https://actas.cdmx.gob.mx" target="_blank" rel="noopener"><span class="badge b-consulta">Consulta</span><h3>Corrección de acta (Registro Civil CDMX)</h3><p>La corrección se gestiona ante el Registro Civil (vía administrativa o judicial según el caso). Confirma el trámite en el portal.</p></a>
+  </div></section>
+
+  <section data-cat="movilidad"><h2>Movilidad</h2><p class="sec-note">Licencias, vehículos y pasaporte. Referencia: Ciudad de México.</p><div class="grid">
+    <a class="card" href="https://licenciapermanente.cdmx.gob.mx/" target="_blank" rel="noopener"><span class="badge b-mixto">En línea + cita</span><h3>Licencia permanente (CDMX)</h3><p>Inicia el trámite en línea y luego agenda módulo para documentos, foto y huellas.</p></a>
+    <a class="card" href="https://app.semovi.cdmx.gob.mx/citas/" target="_blank" rel="noopener"><span class="badge b-cita">Agenda de cita</span><h3>Citas SEMOVI</h3><p>Agenda tu cita en módulos fijos, móviles y de alcaldías de la Secretaría de Movilidad CDMX.</p></a>
+    <a class="card" href="https://www.finanzas.cdmx.gob.mx" target="_blank" rel="noopener"><span class="badge b-pago">Pago de derechos</span><h3>Tarjeta de circulación — refrendo (CDMX)</h3><p>Pago de derechos por renovación vía Tesorería CDMX; el trámite se completa con Llave CDMX / SEMOVI.</p></a>
+    <a class="card" href="https://www.sedema.cdmx.gob.mx/programas/programa/verificacion-vehicular" target="_blank" rel="noopener"><span class="badge b-consulta">Consulta</span><h3>Verificación vehicular (CDMX, SEDEMA)</h3><p>Información oficial del programa, calendario y requisitos; las citas se agendan en verificentros autorizados.</p></a>
+    <a class="card" href="https://www.sedema.cdmx.gob.mx/programas/programa/hoy-no-circula" target="_blank" rel="noopener"><span class="badge b-consulta">Consulta</span><h3>Hoy No Circula (CDMX)</h3><p>Consulta qué vehículos no circulan hoy en la Ciudad de México.</p></a>
+    <a class="card" href="https://www.finanzas.cdmx.gob.mx" target="_blank" rel="noopener"><span class="badge b-mixto">Consulta / pago</span><h3>Infracciones y fotocívicas (CDMX)</h3><p>Consulta y pago de infracciones de tránsito vía Tesorería CDMX.</p></a>
+    <a class="card" href="https://citas.sre.gob.mx" target="_blank" rel="noopener"><span class="badge b-cita">Agenda de cita</span><h3>Pasaporte (SRE)</h3><p>Agenda tu cita para pasaporte. El servicio de cita es gratuito: la SRE advierte no pagar a intermediarios.</p></a>
+  </div></section>
+
+  <section data-cat="legal"><h2>Temas legales</h2><p class="sec-note">Antecedentes, SAT, consumo y finanzas.</p><div class="grid">
+    <a class="card" href="https://constancias.oadprs.gob.mx/" target="_blank" rel="noopener"><span class="badge b-enlinea">En línea</span><h3>Constancia de antecedentes no penales (federal)</h3><p>Portal oficial del Órgano Administrativo Desconcentrado de Prevención y Readaptación Social para iniciar el trámite.</p></a>
+    <a class="card" href="https://citas.sat.gob.mx/" target="_blank" rel="noopener"><span class="badge b-cita">Agenda de cita</span><h3>SAT — Citas</h3><p>Registra, consulta o cancela citas (inscripción al RFC, e.firma de personas físicas, entre otros). Puede haber fila virtual si no hay disponibilidad.</p></a>
+    <a class="card" href="https://www.sat.gob.mx" target="_blank" rel="noopener"><span class="badge b-enlinea">En línea</span><h3>SAT — Portal de trámites y servicios</h3><p>Portal oficial del SAT para trámites, servicios, e.firma y Constancia de Situación Fiscal.</p></a>
+    <a class="card" href="https://www.gob.mx/profeco" target="_blank" rel="noopener"><span class="badge b-enlinea">En línea / consulta</span><h3>Profeco</h3><p>Presenta quejas y denuncias ante la Procuraduría Federal del Consumidor.</p></a>
+    <a class="card" href="https://www.condusef.gob.mx" target="_blank" rel="noopener"><span class="badge b-enlinea">En línea / consulta</span><h3>Condusef</h3><p>Presenta quejas y consulta información sobre servicios financieros.</p></a>
+  </div></section>
+
+  <section data-cat="transparencia"><h2>Transparencia</h2><p class="sec-note">Solicitudes de información pública a través de la Plataforma Nacional de Transparencia.</p><div class="grid">
+    <a class="card" href="https://www.plataformadetransparencia.org.mx" target="_blank" rel="noopener"><span class="badge b-enlinea">En línea</span><h3>Plataforma Nacional de Transparencia (PNT)</h3><p>Consulta obligaciones de transparencia y presenta solicitudes de información a sujetos obligados.</p></a>
+  </div></section>
+
+  <section data-cat="salud"><h2>Salud y seguridad social</h2><p class="sec-note">IMSS e ISSSTE.</p><div class="grid">
+    <a class="card" href="https://www.imss.gob.mx" target="_blank" rel="noopener"><span class="badge b-consulta">Consulta</span><h3>IMSS — Vigencia de derechos</h3><p>Consulta si estás vigente en el IMSS (también en la app IMSS Digital).</p></a>
+    <a class="card" href="https://www.imss.gob.mx" target="_blank" rel="noopener"><span class="badge b-cita">Agenda de cita</span><h3>IMSS — Cita médica familiar</h3><p>Agenda cita médica familiar en línea o en la app IMSS Digital.</p></a>
+    <a class="card" href="https://www.imss.gob.mx" target="_blank" rel="noopener"><span class="badge b-enlinea">En línea</span><h3>IMSS — Número de Seguridad Social (NSS)</h3><p>Tramita o localiza tu NSS en línea.</p></a>
+    <a class="card" href="https://www.imss.gob.mx" target="_blank" rel="noopener"><span class="badge b-consulta">Consulta</span><h3>IMSS — Semanas cotizadas</h3><p>Consulta tus semanas cotizadas ante el IMSS.</p></a>
+    <a class="card" href="https://oficinavirtual.issste.gob.mx" target="_blank" rel="noopener"><span class="badge b-mixto">En línea / cita</span><h3>ISSSTE — SINAVID Oficina Virtual</h3><p>Citas y trámites del ISSSTE en su Oficina Virtual.</p></a>
+  </div></section>
+
+  <section data-cat="fiscal"><h2>Fiscal y trabajo</h2><p class="sec-note">Vivienda, retiro y empleo.</p><div class="grid">
+    <a class="card" href="https://micuenta.infonavit.org.mx" target="_blank" rel="noopener"><span class="badge b-consulta">Consulta</span><h3>INFONAVIT — Mi Cuenta</h3><p>Consulta tu saldo, puntos y precalificación de crédito.</p></a>
+    <a class="card" href="https://www.aforeweb.com.mx" target="_blank" rel="noopener"><span class="badge b-consulta">Consulta</span><h3>Afore — Localiza tu Afore (CONSAR)</h3><p>Descubre en qué Afore está registrada tu cuenta individual.</p></a>
+    <a class="card" href="https://www.consar.gob.mx" target="_blank" rel="noopener"><span class="badge b-consulta">Consulta</span><h3>CONSAR</h3><p>Información oficial sobre Afores, trámites y derechos de los trabajadores.</p></a>
+    <a class="card" href="https://www.empleo.gob.mx/" target="_blank" rel="noopener"><span class="badge b-consulta">Consulta</span><h3>Portal del Empleo (STPS)</h3><p>Bolsa de trabajo oficial: busca vacantes, registra tu CV y postúlate gratis.</p></a>
+  </div></section>
+
+  <section data-cat="identidad"><h2>Identidad y electoral</h2><p class="sec-note">Credencial para votar y servicios consulares.</p><div class="grid">
+    <a class="card" href="https://www.ine.mx" target="_blank" rel="noopener"><span class="badge b-cita">Agenda de cita</span><h3>INE — Credencial para votar</h3><p>Ubica tu módulo y agenda cita para tramitar tu credencial; los trámites son gratuitos.</p></a>
+    <a class="card" href="https://miconsulado.sre.gob.mx" target="_blank" rel="noopener"><span class="badge b-cita">Agenda de cita</span><h3>Citas consulares y credencial en el extranjero (SRE)</h3><p>Agenda citas consulares, incluida la Credencial para Votar desde el extranjero.</p></a>
+    <a class="card" href="https://votoextranjero.mx" target="_blank" rel="noopener"><span class="badge b-consulta">Consulta</span><h3>Voto de los Mexicanos Residentes en el Extranjero</h3><p>Programa oficial del voto desde el extranjero.</p></a>
+  </div></section>
+
+  <section data-cat="educacion"><h2>Educación</h2><div class="grid">
+    <a class="card" href="https://www.cedulaprofesional.sep.gob.mx" target="_blank" rel="noopener"><span class="badge b-enlinea">En línea</span><h3>Cédula profesional (SEP)</h3><p>Tramita tu cédula profesional electrónica en el Registro Nacional de Profesionistas.</p></a>
+  </div></section>
+
+  <p class="nores" id="nores">Sin resultados para tu búsqueda. Prueba con otra palabra o revisa la sección de <a href="servicios/">Pagos y servicios</a>.</p>
+</main>
+<footer><div class="wrap">
+  <p><strong>TramitaNet</strong> solo enlaza a portales oficiales (.gob.mx y sitios oficiales de las instituciones). No cobra, no gestiona trámites ni pide tus datos: cada liga te lleva al sitio oficial, donde el trámite se hace directamente.</p>
+  <p>Los trámites estatales se muestran con la Ciudad de México como referencia. Para otros estados, busca en <a href="https://www.gob.mx/tramites" target="_blank" rel="noopener">gob.mx/tramites</a>. ¿Falta un trámite o cambió una liga? Se agregan y corrigen conforme se validan.</p>
+</div></footer>
+<script>
+const q=document.getElementById('q'),chips=document.querySelectorAll('.chip'),sections=document.querySelectorAll('section[data-cat]'),nores=document.getElementById('nores');
+let cat='all';
+chips.forEach(c=>c.addEventListener('click',()=>{chips.forEach(x=>x.classList.remove('active'));c.classList.add('active');cat=c.dataset.cat;filter();}));
+q.addEventListener('input',filter);
+function filter(){const t=q.value.toLowerCase().trim();let any=false;
+sections.forEach(s=>{const showCat=cat==='all'||s.dataset.cat===cat;let secAny=false;
+s.querySelectorAll('.card').forEach(card=>{const show=showCat&&(!t||card.textContent.toLowerCase().includes(t));card.style.display=show?'':'none';if(show){secAny=true;any=true;}});
+s.style.display=secAny?'':'none';});
+nores.style.display=any?'none':'block';}
+</script>
+</body>
+</html>
