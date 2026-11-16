@@ -30,3 +30,7 @@ python3 -m http.server 8000
 ## Sitio en vivo
 
 https://frankjunker87-arch.github.io/tramitanet-la-pape/
+
+## Contribuidores
+
+Contribución preparada en colaboración por **psehgaft**, **san985tos**, **frankjunker87-arch** y **tec-girl**.
